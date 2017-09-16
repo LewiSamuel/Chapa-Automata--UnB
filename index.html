@@ -4,6 +4,24 @@
 <head>
 	<title>Chapa Autômata</title>
 	<style type="text/css">
+		@-webkit-keyframes fadeIn {
+		0% { opacity: 0; }
+		100% { opacity: 1; } 
+		}
+		@-moz-keyframes fadeIn {
+		0% { opacity: 0;}
+		100% { opacity: 1; }
+		}
+		@-o-keyframes fadeIn {
+		0% { opacity: 0; }
+		100% { opacity: 1; }
+		}
+		@keyframes fadeIn {
+		0% { opacity: 0; }
+		100% { opacity: 1; }
+		}
+
+
 		body, html{
 			width: 100%;
 			height: 100%;
@@ -15,7 +33,7 @@
 			align-items: center;
 			justify-content: center;
 			text-align: center;
-    		font-family: GillSans, Calibri, Trebuchet, sans-serif;
+    		/*font-family: GillSans, Calibri, Trebuchet, sans-serif;*/
 		}
 		header{
 			width: 100%;
@@ -26,6 +44,14 @@
 			max-height: 100%;
 			overflow: hidden;
 			flex-direction: column;
+		}
+		*{
+		    transition: 1s;
+			font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+			-webkit-animation: fadeIn 1s ease-in-out;
+			-moz-animation: fadeIn 1s ease-in-out;
+			-o-animation: fadeIn 1s ease-in-out;
+			animation: fadeIn 1s ease-in-out;
 		}
 		img{
 			text-align: center;
@@ -42,7 +68,6 @@
 		    justify-content: center;
 		    margin: auto;
 		    height: 300px;
-		    transition: 1s all;
 		}
 		.white{
 			background-color: white;
@@ -55,9 +80,60 @@
 			background-image: url("https://media.giphy.com/media/ZVik7pBtu9dNS/giphy.gif");
 			background-size: cover;
 			background-attachment: fixed;
-			background-position: center;
-			height: 300px;
+			background-position: bottom center;
+			height: 350px;
 			width: 100%;
+		}
+		#proposta:hover{
+			background-color: rgba(255,255,255,0.01);
+			/*cursor: pointer;*/
+		}
+		#proposta ol{
+			text-align: left;
+			font-size: 12px;
+		}
+		.ocultar{
+			display: none;
+		}
+		.proposta{
+			/*border-bottom: 1px solid #39a3bb;*/
+		}
+		nav{
+			background-color: #39a3bb;
+		}
+		section .container{
+			padding-top: 50px; 
+			padding-bottom: 50px;
+		}
+		.pessoa{
+			display: flex;
+			flex-direction: column;
+		}
+		.img-perfil{
+			width: 200px;
+			height: 200px;
+			margin: 15px auto 10px auto;
+			border: 1px solid white;
+			border-radius: 150px;
+		}
+		.img-perfil2{
+			width: 150px;
+			height: 150px;
+			margin: 15px auto 10px auto;
+			border: 1px solid white;
+			border-radius: 150px;
+		}
+		.cargo{
+			background-color: white;
+			overflow: hidden;
+			padding: 5px 15px;
+			color: black;
+			margin: -15px auto 0px auto;
+			font-size: 16px;
+		}
+		.nome{
+			font-size: 20px;
+			font-weight: bold;
 		}
 	</style> 
 
@@ -75,141 +151,241 @@
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
       <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
-   
+   	
+
 	<header>
 		<img src="automata.jpeg">
 	</header>
 
+  <nav class="nav-extended" style="background-color: #39a3bb;">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo center"><b>Autômata</b></a>
+      </div>
+    <div class="nav-content">
+      <ul class="tabs tabs-transparent">
+        <li class="tab"><a href="#sobre-aba" class="active">Sobre</a></li>
+        <li class="tab"><a href="#propostas-aba">Propostas</a></li>
+        <li class="tab"><a href="#test3">Equipe</a></li>
+        <li class="tab"><a href="#test4">Calendário</a></li>
+        <li class="tab"><a href="#test5">Contato</a></li>
+      </ul>
+    </div>
+  </nav>
+ 
+
 	<section class="grey darken-4 white-text" style="overflow: hidden;">
 		<div class="container">
-		<h1>Chapa <b>Autômatas</b></h1>
-		<h3>Nossas propostas:</h3>
-		<div class="row">
-			<div class="col s12 m3">
-			 <i class="large material-icons">insert_chart</i>
-			 <p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua.</p>
+			
+			<div id="sobre-aba" class="col s12">
+				<!-- SOBRE -->
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 			</div>
+			<div id="propostas-aba" class="col s12">
+		  	 <!-- PROPOSTAS -->
+		  	 	<h4 style="color: gray;">Nossas propostas:</h4>
+				<div class="row">
 
-			<div class="col s12 m3">
-			 <i class="large material-icons">access_time</i>
-			 <p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua.</p>
-			</div>
 
-			<div class="col s12 m3">
-			 <i class="large material-icons">block</i>
-			 <p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua.</p>
-			</div>
+				<div class="col s12 m4" id="proposta">
+						<div class="proposta">
+							 <i class="large material-icons">settings</i>
+							 <p><b>Limpeza e manutenção</b></p>
+						</div>
+						<ol class="propostaa">
+							<li>Limpeza imediata e periódica</li>
+							<li>Conserto dos sofás </li>
+							<li>Conserto e instalação de tomadas</li>
+							<li>Reutilização dos armários</li>
+							<li>Conserto das câmeras de segurança</li>
+							<li>Conserto da geladeira</li>
+							<li>Conserto do microondas</li>
+							<li>Conserto das cadeiras</li>
+							<li>Restaurar placa de identificação do CA</li>
+						</ol>
+				</div>
 
-			<div class="col s12 m3">
-			 <i class="large material-icons">android</i>
-			 <p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua.</p>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col s12 m3">
-			 <i class="large material-icons">insert_chart</i>
-			 <p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua.</p>
-			</div>
 
-			<div class="col s12 m3">
-			 <i class="large material-icons">access_time</i>
-			 <p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua.</p>
-			</div>
+				<div class="col s12 m4" id="proposta">
+						<div class="proposta">
+							 <i class="large material-icons">accessibility</i>
+							 <p><b>Ambiente amigável para os alunos da computação</b></p>
+						</div>
+						<ol class="propostab">
+							<li>Maior acompanhamento dos calouros </li>
+							<li>Maior representatividade das minorias</li>
+							<li>Ativar página do CACOMP</li>
+							<li>Mais interação gestão / aluno </li>
+							<li>Fim da página “Todo dia uma foto do CACOMP fechado”</li>
+						</ol>
+				</div>
 
-			<div class="col s12 m3">
-			 <i class="large material-icons">block</i>
-			 <p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua.</p>
-			</div>
+				<div class="col s12 m4" id="proposta">
+						<div class="proposta">
+							 <i class="large material-icons">group</i>
+							 <p><b>Maior promoção de eventos gerais, desportivos e E-sports </b></p>
+						</div>
+						<ol class="propostac">
+							<li>Campeonatos de videogames</li>
+							<li>Criação da atlética</li>
+							<li>Continuação dos campeonatos de computsal</li>
+							<li>Cine CACOMP</li>
+							<li>Maior variedade de venda de produtos </li>
+							<li>Agenda de disponibilidade e eventos do CA</li>
+						</ol>
+				</div>
 
-			<div class="col s12 m3">
-			 <i class="large material-icons">android</i>
-			 <p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua.</p>
-			</div>
-		</div>
+
+				
+
+				</div>
+
+				<div class="row">
+					<div class="col s12 m6" id="proposta">
+						<div class="proposta">
+							 <i class="large material-icons">notifications_active</i>
+							 <p><b>Inovações</b></p>
+						</div>
+						<ol class="propostae">
+							<li>Cafeteira e bolacha</li>
+							<li>Caixa de reclamações do curso</li>
+							<li>Arcade</li>
+						</ol>
+				</div>
+
+				<div class="col s12 m6" id="proposta">
+						<div class="proposta">
+							 <i class="large material-icons">business_center</i>
+							 <p><b>Centralização de questões acadêmicas e profissionais</b></p>
+						</div>
+						<ol class="propostad">
+							<li>Mural de estágios (físico e online)</li>
+							<li>Banco de provas / materiais de estudo (online)</li>
+							<li>Sistema de monitorias</li>
+						</ol>
+				</div>
+
+				</div>
+
+
+		  </div>
+		  
+		  <div id="test3" class="col s12">
+		  	<!-- EQUIPE -->
+				<h4 style="color: gray; font-weight: bold;">Diretoria</h4>
+				<div class="row">
+					<section class="col s12 m6">
+						<div class="pessoa">
+					    	<div class="img-perfil"></div>
+					    	<div class="cargo">Presidente</div>
+					    	<div class="nome">Jaqueline Gutierri</div>
+				    	</div>
+				    </section>
+
+				    <section class="col s12 m6">
+				    	<div class="pessoa">
+					    	<div class="img-perfil"></div>
+					    	<div class="cargo">Vice presidente</div>
+					    	<div class="nome">Vitor Moraes</div>
+				    	</div>
+				    </section>
+			    </div>
+			    <div class="row">
+				    <section class="col s12 m4">
+						<div class="pessoa">
+					    	<div class="img-perfil2"></div>
+					    	<div class="cargo">Tesoureiro</div>
+					    	<div class="nome">Thales Lima</div>
+				    	</div>
+				    </section>
+
+				    <section class="col s12 m4">
+				    	<div class="pessoa">
+					    	<div class="img-perfil2"></div>
+					    	<div class="cargo">Secretária</div>
+					    	<div class="nome">Dayanne Fernandes</div>
+				    	</div>
+				    </section>
+
+				    <section class="col s12 m4">
+						<div class="pessoa">
+					    	<div class="img-perfil2"></div>
+					    	<div class="cargo">Infraestrutura</div>
+					    	<div class="nome">Matheus de Souza</div>
+				    	</div>
+				    </section>
+			    </div>
+
+
+
+			    <h4 style="color: gray; font-weight: bold;">Comissões</h4>
+				<div class="row">
+					<section class="col s12 m4">
+						<div class="pessoa">
+					    	<div class="img-perfil2"></div>
+					    	<div class="cargo">Diretoria de Comunicação</div>
+					    	<div class="nome">Lewi Samuel</div>
+				    	</div>
+				    </section>
+
+				    <section class="col s12 m4">
+				    	<div class="pessoa">
+					    	<div class="img-perfil2"></div>
+					    	<div class="cargo">Diretoria de Esportes</div>
+					    	<div class="nome">Diego Della Rocca</div>
+				    	</div>
+				    </section>
+				    <section class="col s12 m4">
+				    	<div class="pessoa">
+					    	<div class="img-perfil2"></div>
+					    	<div class="cargo">Diretoria de Eventos</div>
+					    	<div class="nome">Caio Nunes</div>
+				    	</div>
+				    </section>
+			    </div>
+
+			    <div class="row">
+					<section class="col s12 m4">
+						<div class="pessoa">
+					    	<div class="img-perfil2"></div>
+					    	<div class="cargo">Diretoria do Sistema de Monitorias</div>
+					    	<div class="nome">João Pedro</div>
+				    	</div>
+				    </section>
+
+				    <section class="col s12 m4">
+				    	<div class="pessoa">
+					    	<div class="img-perfil2"></div>
+					    	<div class="cargo">Diretoria das Minorias</div>
+					    	<div class="nome">Rebeca Marins</div>
+				    	</div>
+				    </section>
+				    <section class="col s12 m4">
+				    	<div class="pessoa">
+					    	<div class="img-perfil2"></div>
+					    	<div class="cargo">Diretoria da Recepção de Calouros</div>
+					    	<div class="nome">Gabriel Alves</div>
+				    	</div>
+				    </section>
+			    </div>
+
+
+
+
+
+
+		  </div>
+		  <div id="test4" class="col s12">Test 4</div>
+		  <div id="test5" class="col s12">Test 5</div>
+		
+		
 		</div>
 	</section>
 	<section id="break-gif"></section>
-	<section class="grey darken-4 white-text" style="overflow: hidden;">
-		<div class="container">
-		<h3>Outras propostas:</h3>
-		<div class="row">
-			<div class="col s12 m3">
-			 <i class="large material-icons">insert_chart</i>
-			 <p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua.</p>
-			</div>
 
-			<div class="col s12 m3">
-			 <i class="large material-icons">access_time</i>
-			 <p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua.</p>
-			</div>
-
-			<div class="col s12 m3">
-			 <i class="large material-icons">block</i>
-			 <p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua.</p>
-			</div>
-
-			<div class="col s12 m3">
-			 <i class="large material-icons">android</i>
-			 <p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua.</p>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col s12 m3">
-			 <i class="large material-icons">insert_chart</i>
-			 <p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua.</p>
-			</div>
-
-			<div class="col s12 m3">
-			 <i class="large material-icons">access_time</i>
-			 <p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua.</p>
-			</div>
-
-			<div class="col s12 m3">
-			 <i class="large material-icons">block</i>
-			 <p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua.</p>
-			</div>
-
-			<div class="col s12 m3">
-			 <i class="large material-icons">android</i>
-			 <p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua.</p>
-			</div>
-		</div>
-		</div>
-	</section>
-	<header>
-		<img src="automata.jpeg">
-	</header>
 </body>
 </html>
